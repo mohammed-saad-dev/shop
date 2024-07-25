@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import mouse from '../assets/mouse.jpg'
 import keyboard from '../assets/key board.jpg'
 import monitor from '../assets/monitor.jpg'
@@ -28,11 +28,8 @@ function Sections({ searchValue } ) {
   
     }])
 
-    useEffect(() => {
-      setCard( card.filter(el => el.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1 ));
-      
-    }, [searchValue]);
-
+   
+console.log(card.filter(el => el.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1 ))
     
 
   function deleteFunc(index) {
@@ -40,7 +37,12 @@ function Sections({ searchValue } ) {
   }
   return (
     <>
-      {card.map(({ unique, image, name, price }) => (
+      {card.filter((item) => {
+                return searchValue.toLowerCase() === ''
+                  ? item
+                  : item.name.toLowerCase().includes(searchValue);
+              })
+              .map(({ unique, image, name, price }) => (
         <div key={unique} className="section container">
           <div className="card">
             <img src={image} alt="logo" />
