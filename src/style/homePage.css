@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F7EEDD;
+}
+.container{
+    padding:0 70px;
+    margin:0px  auto
+}
+
+/*nav style*/
+nav{
+    height: 80px;
+    background-image:  linear-gradient(#d53200b2, #ffb300);
+}
+nav .container{
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav li{
+    list-style-type: none;
+    padding-left: 10px;
+}
+nav ul{
+    display: flex;
+
+}
+nav img{
+    width: 60px;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav input{
+    border: 1px solid gray;
+    height: 35px;
+    width: 435px;
+    background: #fff;
+    border-radius: 5px;
+    outline: none;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 15px;
+}
+.search{
+    position: relative;
+    right: 30px;
+    color: gray;
+}
+.hideButton{
+    background: #595959;
+    color: white;
+    border: 1px lightgray solid;
+    padding: 5px;
+    border-radius: 3px;
+    font-family: "Anton SC", sans-serif;
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+}
+ 
+.hide{
+    visibility: hidden;
+}
+/*sections*/
+.MidPage{
+    margin-top: 30px;
+    height: 100vh;
+}
+.subject{
+text-align: center;
+}
+.card{
+    background: lightgray;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+}
+.Delete {
+    padding: 10px;
+    font-family: "Anton SC", sans-serif;
+    cursor: pointer;
+}
+.cards{
+    margin-top:50px;
+    display: flex;
+}
+.card img{
+    width: 250px;
+}
