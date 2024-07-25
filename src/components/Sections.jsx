@@ -29,13 +29,11 @@ function Sections({ searchValue } ) {
     }])
 
     useEffect(() => {
-      setCard(prevCard =>
-        prevCard.filter(el =>
-          el.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1
-        )
-      );
+      setCard( card.filter(el => el.name.toLowerCase().indexOf(searchValue.toLowerCase()) !== -1 ));
+      
     }, [searchValue]);
 
+    
 
   function deleteFunc(index) {
     setCard(prevCard => prevCard.filter(el => el.unique !== index));
