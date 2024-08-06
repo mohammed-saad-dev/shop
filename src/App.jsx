@@ -1,7 +1,8 @@
 import Landing from "./components/Lnading";
 import Navbar from "./components/Navbar";
 import "./style/homePage.css";
-import { useState } from "react";
+import { useState, createContext } from "react";
+export const searchContext = createContext()
 function App() {
 
   const [hide,setHide] = useState("show") // toggle hide and show the navbar 
@@ -13,8 +14,11 @@ function App() {
   
   return (
     <div>
+
       <Navbar hide={hide} searchValue={searchValue} onInputChange={handleInputChange}/> 
-      <Landing setHide={setHide} searchValue={searchValue}/>
+      <searchContext.Provider value={searchValue}>
+        <Landing setHide={setHide}/>
+      </searchContext.Provider>
     </div>
   );
 }

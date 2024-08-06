@@ -1,6 +1,6 @@
 import Sections from './Sections'
  
-function Landing({ searchValue, setHide }){
+function Landing({ setHide }){
  
   const handleHideClick = () => {
     setHide((prevState) => {
@@ -16,7 +16,7 @@ function Landing({ searchValue, setHide }){
       
       <p className="subject">ALL SECTIONS</p>
       <div className='cards'>
-        <Sections   searchValue={searchValue}  />     
+        <Sections/>     
       </div>
   </div>
   )
